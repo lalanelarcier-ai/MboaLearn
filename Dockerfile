@@ -17,11 +17,12 @@ RUN apt-get update && apt-get install -y \
 RUN a2enmod rewrite
 
 # Copier le projet dans le container
-COPY . /var/www/html/
+COPY . /var/www/html/MboaLearn/
 
 # Permissions sur le dossier uploads
-RUN chown -R www-data:www-data /var/www/html/ \
-    && chmod -R 755 /var/www/html/
+RUN mkdir -p /var/www/html/MboaLearn/uploads \
+    && chown -R www-data:www-data /var/www/html/MboaLearn/ \
+    && chmod -R 755 /var/www/html/MboaLearn/
 
 # PHP config
 RUN echo "upload_max_filesize = 64M" >> /usr/local/etc/php/php.ini \
