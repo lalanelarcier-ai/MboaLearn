@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MboaLearn - Plateforme d'apprentissage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/mboalearn.png" alt="MboaLearn" class="nav-logo">
+            </a>
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Fonctionnalités</a>
+                <a href="#roles" class="nav-link">Rôles</a>
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="login.php" class="nav-link">
+                    Connexion
+                </a>
+                <a href="register.php" class="btn-primary">
+                    Inscription
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>
+                    Bienvenue sur <span class="gradient-text" style="-webkit-text-fill-color: white; background: none;">MboaLearn</span>
+                </h1>
+                <p>Votre plateforme d'apprentissage en ligne. Suivez des cours, passez des évaluations et obtenez vos certificats.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <a href="register.php" class="btn-primary" style="padding: 0.8rem 2rem; font-size: 1.1rem; background: white; color: var(--primary);">
+                        <i class="bi bi-rocket-takeoff"></i> Commencer maintenant
+                    </a>
+                    <a href="#features" class="btn-secondary" style="padding: 0.8rem 2rem; font-size: 1.1rem; background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.3);">
+                        <i class="bi bi-info-circle"></i> En savoir plus
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fonctionnalités -->
+        <section id="features" class="container" style="margin-bottom: 4rem;">
+            <h2 class="text-center mb-3" style="font-size: 2rem; font-weight: 700;">Fonctionnalités</h2>
+            <p class="text-center text-muted mb-3">Tout ce dont vous avez besoin pour apprendre et enseigner</p>
+            
+            <div class="grid grid-3">
+                <div class="card" style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: rgba(5,150,105,0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem;">
+                        <i class="bi bi-play-circle"></i>
+                    </div>
+                    <h3 class="card-title">Cours Vidéo</h3>
+                    <p class="card-content">Suivez des leçons en vidéo depuis n'importe quel appareil</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: rgba(220,38,38,0.1); color: var(--danger); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem;">
+                        <i class="bi bi-file-pdf"></i>
+                    </div>
+                    <h3 class="card-title">Documents PDF</h3>
+                    <p class="card-content">Accédez à des supports de cours au format PDF</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: rgba(234,179,8,0.1); color: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem;">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+                    <h3 class="card-title">Évaluations</h3>
+                    <p class="card-content">Testez vos connaissances avec des QCM interactifs</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: rgba(16,185,129,0.1); color: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem;">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3 class="card-title">Progression</h3>
+                    <p class="card-content">Suivez votre avancement en temps réel</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: rgba(220,38,38,0.1); color: var(--danger); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem;">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h3 class="card-title">Certificats</h3>
+                    <p class="card-content">Obtenez des certificats pour valider vos compétences</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: rgba(217,119,6,0.1); color: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem;">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3 class="card-title">Multi-rôles</h3>
+                    <p class="card-content">Interface dédiée pour étudiants, enseignants et promoteurs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rôles -->
+        <section id="roles" class="container" style="margin-bottom: 4rem; background: var(--bg-white); padding: 3rem; border-radius: var(--radius); box-shadow: var(--shadow);">
+            <h2 class="text-center mb-3" style="font-size: 2rem; font-weight: 700;">Trois rôles, une plateforme</h2>
+            <p class="text-center text-muted mb-3">Chaque utilisateur dispose d'un espace adapté à ses besoins</p>
+            
+            <div class="grid grid-3">
+                <div class="card" style="border-top: 4px solid var(--primary);">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem;">Étudiant</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Suivre les cours
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Passer les évaluations
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Voir sa progression
+                        </li>
+                        <li style="padding: 0.5rem 0;">
+                            <i class="bi bi-check2 text-success"></i> Télécharger les certificats
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="border-top: 4px solid var(--success);">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--success); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                            <i class="bi bi-easel"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem;">Enseignant</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Créer des cours
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Ajouter des leçons
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Créer des QCM
+                        </li>
+                        <li style="padding: 0.5rem 0;">
+                            <i class="bi bi-check2 text-success"></i> Voir les résultats
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="border-top: 4px solid var(--warning);">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--warning); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem;">Promoteur</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Gérer les modules
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Gérer les enseignants
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+                            <i class="bi bi-check2 text-success"></i> Voir les statistiques
+                        </li>
+                        <li style="padding: 0.5rem 0;">
+                            <i class="bi bi-check2 text-success"></i> Attribuer les certificats
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- À propos -->
+        <section id="about" class="container" style="margin-bottom: 4rem;">
+            <div class="card" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 class="card-title mb-2">À propos de MboaLearn</h2>
+                <p class="card-content" style="font-size: 1.05rem;">
+                    MboaLearn est un projet de Mini Learning Management System réalisé dans le cadre du TP de l'UE INF222 - Programmation web. 
+                    Ce projet démontre les fonctionnalités essentielles d'une plateforme d'apprentissage en ligne 
+                    en utilisant les technologies HTML, CSS, JavaScript, AJAX, PHP et MySQL.
+                </p>
+                <div style="margin-top: 2rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">HTML5</div>
+                        <div style="color: var(--text-muted);">Structure</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">CSS3</div>
+                        <div style="color: var(--text-muted);">Design</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">JavaScript</div>
+                        <div style="color: var(--text-muted);">Interactivité</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">PHP</div>
+                        <div style="color: var(--text-muted);">Logique</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">MySQL</div>
+                        <div style="color: var(--text-muted);">Données</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MboaLearn — TP INF222 — Yvana Emilia Lalane Larcier 24G2439</p>
+            <p class="footer-links">
+                <a href="#">Aide</a> |
+                <a href="#">Conditions</a> |
+                <a href="#">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

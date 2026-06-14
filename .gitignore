@@ -1,0 +1,18 @@
+# IDEs and OS files
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# PHP / Database settings (if they contain sensitive keys later)
+# config/database.php
+
+# Ignore contents of uploads, but keep the folders
+/uploads/certificats/*
+!/uploads/certificats/.gitkeep
+/uploads/cours/*
+!/uploads/cours/.gitkeep
