@@ -1,14 +1,14 @@
 <?php
 /**
- * Configuration de la base de données
+ * Configuration de la base de donnees
  * MboaLearn - Mini Learning Management System
  */
 
-// Paramètres de connexion
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'l2_lms');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// Parametres de connexion (supporte Docker/Render via env vars)
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_NAME', getenv('DB_NAME') ?: 'l2_lms');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
 
 // Connexion PDO
 try {
@@ -23,15 +23,15 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    die("Erreur de connexion à la base de données : " . $e->getMessage());
+    die("Erreur de connexion a la base de donnees : " . $e->getMessage());
 }
 
-// Démarrer la session si pas déjà active
+// Demarrer la session si pas deja active
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Fonction utilitaire pour nettoyer les entrées
+// Fonction utilitaire pour nettoyer les entrees
 function clean_input($data) {
     return htmlspecialchars(strip_tags(trim($data)));
 }

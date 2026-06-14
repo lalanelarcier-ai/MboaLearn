@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: mboalearn
+    runtime: image
+    image:
+      url: # Render builda automatiquement depuis le Dockerfile
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: mboalearn-db
+          property: host
+      - key: DB_NAME
+        fromDatabase:
+          name: mboalearn-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: mboalearn-db
+          property: user
+      - key: DB_PASS
+        fromDatabase:
+          name: mboalearn-db
+          property: password
+    healthCheckPath: /
+    autoDeploy: true
+
+databases:
+  - name: mboalearn-db
+    plan: free
+    databaseName: l2_lms
+    ipAllowType: none

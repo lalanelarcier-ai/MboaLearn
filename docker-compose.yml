@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mboadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mboalearn2026
+      MYSQL_DATABASE: l2_lms
+      MYSQL_USER: mboauser
+      MYSQL_PASSWORD: mboapass2026
+    volumes:
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mboaweb
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_NAME: l2_lms
+      DB_USER: mboauser
+      DB_PASS: mboapass2026
+    volumes:
+      - ./uploads:/var/www/html/uploads
+
+volumes:
+  mysql_data:
